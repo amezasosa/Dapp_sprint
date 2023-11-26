@@ -1,0 +1,15 @@
+var Web3 = require('web3');
+var web3 = new Web3('http://localhost:8545');
+
+var contractAddress = '0x1234...'; // La dirección de tu contrato desplegado
+var abi = [...] // El ABI de tu contrato
+
+var contract = new web3.eth.Contract(abi, contractAddress);
+
+// Para llamar a la función get() del contrato:
+contract.methods.get().call()
+.then(console.log);
+
+// Para enviar una transacción a la función set() del contrato:
+contract.methods.set(5).send({from: '0x5678...'})
+.then(console.log);
