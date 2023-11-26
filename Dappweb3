@@ -1,7 +1,7 @@
 var Web3 = require('web3');
 var web3 = new Web3('http://localhost:8545');
 
-var contractAddress = '0x1234...'; // La dirección de tu contrato desplegado
+var contractAddress = '0x79dC0b2FA0A277865cd857A58a0386609523d578'; // La dirección de tu contrato desplegado
 var abi = [
 	{
 		"inputs": [
@@ -88,5 +88,5 @@ contract.methods.get().call()
 .then(console.log);
 
 // Para enviar una transacción a la función set() del contrato:
-contract.methods.set(5).send({from: '0x5678...'})
+contract.methods.set(5).send({from: '0xFC8679880e53d3bF0d0e12c8e8062D2E8A3fBe0d'})
 .then(console.log);
